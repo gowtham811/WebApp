@@ -22,4 +22,8 @@
     <ProjectReference Include="..\WebApp.Infrastructure\WebApp.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\VillaImage\" />
+  </ItemGroup>
+
 </Project>

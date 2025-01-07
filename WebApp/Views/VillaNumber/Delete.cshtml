@@ -13,7 +13,7 @@
 			<input asp-for="VillaNumber.Villa_Number" hidden />
 			<div class="p-3">
 				<div class="form-floating py-2 col-12">
-					<select asp-for="@Model.VillaNumber.VillaId" asp-items="@Model.VillaList"
+					<select disabled asp-for="@Model.VillaNumber.VillaId" asp-items="@Model.VillaList"
 						  class="form-select border shadow">
 						<option disabled selected>--Select Villa--</option>
 					</select>
@@ -27,15 +27,15 @@
 					<span asp-validation-for="VillaNumber.Villa_Number" class="text-danger"></span>
 				</div>
 				<div class="form-floating py-2 col-12">
-					<input asp-for="VillaNumber.SpecialDetails" class="form-control border shadow"/>
+					<input asp-for="VillaNumber.SpecialDetails" disabled class="form-control border shadow"/>
 					<label asp-for="VillaNumber.SpecialDetails" class="ms-2"></label>
 					<span asp-validation-for="VillaNumber.SpecialDetails" class="text-danger"></span>
 				</div>
 
 				<div class="row pt-2">
 					<div class="col-6 col-md-3">
-						<button type="submit" class="btn btn-success w-100">
-							<i class="bi bi-check-circle"></i> Update 
+						<button type="submit" class="btn btn-danger w-100">
+							<i class="bi bi-check-circle"></i> Delete 
 						</button>
 					</div>
 					<div class="col-6 col-md-3">
@@ -51,6 +51,6 @@
 </div>
 @section Scripts {
 	@{
-						<partial name="_ValidationScriptsPartial"/> 
+								<partial name="_ValidationScriptsPartial"/> 
 	}
 }
